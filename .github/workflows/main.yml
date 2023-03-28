@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
       - name: Install Dependencies And Compile
-        run: apk add gmp mpc1 mpfr4 --quiet && make && mkdir export && cp -R export && cp script.lua EBOOT.PBP export
+        run: apk add gmp mpc1 mpfr4 --quiet && make && mkdir export && cp -R export && cp EBOOT.PBP export && cp script.lua export
       - name: Publish Artifact
         uses: actions/upload-artifact@main
         with:
